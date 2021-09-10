@@ -15,9 +15,12 @@
 // hamburgerMenu.addEventListener("click", showMenu)
 // timesMenu.addEventListener("click", hideMenu)
 
+require('dotenv').config()
 
 var bodyParser = require('body-parser')
 var express = require('express');
+var port = process.env.PORT || 8000;
+
 
 
 var app = express();
@@ -58,13 +61,8 @@ app.post("/", function(req, res) {
 
 
 
-
-
-
-
-
-app.listen(3000, function() {
-    console.log('server started at 3000.... .')
+app.listen(port, function() {
+    console.log(`server started at ${port}.... .`)
 })
 
 
